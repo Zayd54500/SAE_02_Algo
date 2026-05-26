@@ -1,19 +1,38 @@
 import java.util.ArrayList;
 
 public class GrapheListe implements Graphe {
-    private ArrayList<Noeud> noeuds;
-    private  ArrayList<Arcs> suivant;
-    public GrapheListe(){
-        this.noeuds = new ArrayList<Noeud>();
-        this.suivant = new ArrayList<Arcs>();
+    private ArrayList<String> noeuds;
+    private ArrayList<Arcs> adjacence;
+
+    public GrapheListe() {
+        this.noeuds = new ArrayList<String>();
+        this.adjacence = new ArrayList<Arcs>();
     }
-    public ArrayList<Noeud> getNoeuds(){
+
+    public void ajouterArc(String depart, String destination, double cout) {
+        if (!noeuds.contains(depart)) {
+            noeuds.add(depart);
+            adjacence.add(new Arcs());
+        }
+        if (!noeuds.contains(destination)) {
+            noeuds.add(destination);
+            adjacence.add(new Arcs());
+        }
+
+        int indiceDepart = noeuds.indexOf(depart);
+        adjacence.get(indiceDepart).addArc(new Arc(destination, cout));
+    }
+
+    public ArrayList<String> listeNoeuds() {
         return this.noeuds;
     }
-    public ArrayList<Arcs> getSuivant(){
-        ArrayList<Arcs> l = new ArrayList<Arcs>();
-        for(int i = 0; i<this.noeuds.size(); i++){
-            l.add(this.noeuds.get(i))
+
+    public Arcs suivants(String noeud) {
+        if(noeuds.contains(noeud)) {
+            int indiceNoeud = noeuds.indexOf(noeud);
+            return adjacence.get(indiceNoeud);
         }
+        return new Arcs();
     }
 }
+

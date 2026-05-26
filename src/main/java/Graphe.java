@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public interface Graphe {
-    ArrayList<Noeud> getNoeuds();
-    ArrayList<Arcs> getSuivant();
+    public void ajouterArc(String depart, String destination, double cout);
+    public ArrayList<String> listeNoeuds();
+    public Arcs suivants(String noeud);
 }
