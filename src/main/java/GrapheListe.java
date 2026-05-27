@@ -10,10 +10,10 @@ public class GrapheListe implements Graphe {
     public ArrayList<Noeud> getNoeuds(){
         return this.noeuds;
     }
-    public ArrayList<Arcs> getSuivant(){
-        ArrayList<Arcs> l = new ArrayList<Arcs>();
-        for(int i = 0; i<this.noeuds.size(); i++){
-            l.add(this.noeuds.get(i))
-        }
+    public ArrayList<Arc> getSuivant(String noeud){
+
+    }
+    public void ajoutArc(Noeud source, String destination, int poids){
+        Arc a = new Arc(destination, poids);
     }
 }

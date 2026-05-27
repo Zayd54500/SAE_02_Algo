@@ -2,5 +2,5 @@ import java.util.ArrayList;
 
 public interface Graphe {
     ArrayList<Noeud> getNoeuds();
-    ArrayList<Arcs> getSuivant();
+    ArrayList<Arc> getSuivant(String noeud);
 }
