@@ -17,6 +17,14 @@ public class Valeurs {
         parents.add(parent);
     }
 
+    public double getValeur(String noeud) {
+        if (noeuds.contains(noeud)) {
+            int indiceNoeud = noeuds.indexOf(noeud);
+            return valeurs.get(indiceNoeud);
+        }
+        return Double.POSITIVE_INFINITY;
+    }
+
     public String getParent(String noeud) {
         if(noeuds.contains(noeud)) {
             int indiceNoeud = noeuds.indexOf(noeud);
