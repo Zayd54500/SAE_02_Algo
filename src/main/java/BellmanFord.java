@@ -17,6 +17,7 @@ public class BellmanFord {
                 String noeudMin = "";
                 if (vieux.getValeur(noeud) != Double.MAX_VALUE) {
                     for (Arc arc : g.suivants(noeud).getArcs()) {
+                        coutMin = arc.getCout();
                         if (arc.getCout() + vieux.getValeur(noeud) < coutMin) {
                             coutMin = arc.getCout()+vieux.getValeur(noeud);
                             noeudMin = arc.getDestination();
