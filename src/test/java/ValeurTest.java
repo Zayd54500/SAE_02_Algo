@@ -10,6 +10,10 @@ public class ValeurTest {
         valeur.ajouterValeur("C", 2.0, "A");
         valeur.setValeur("B", 3.0);
         valeur.setParent("B", "C");
+        
+        assertEquals(0.0, valeur.getValeur("A"));
+        assertEquals(3.0, valeur.getValeur("B"));
+        assertEquals(2.0, valeur.getValeur("C"));
 
 
     }
