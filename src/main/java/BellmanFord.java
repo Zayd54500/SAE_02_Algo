@@ -1,6 +1,6 @@
 public class BellmanFord {
     private Graphe g;
-    public  calculer(){
-
+    public Valeurs calculer(){
+        return new Valeurs();
     }
 }
