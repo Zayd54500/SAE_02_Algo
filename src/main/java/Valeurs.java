@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
-public class valeurs {
+public class Valeurs {
     private ArrayList<String> noeuds;
     private ArrayList<Double> valeurs;
     private ArrayList<String> parents;
 
-    public valeurs() {
+    public Valeurs() {
         this.noeuds = new ArrayList<>();
         this.valeurs = new ArrayList<>();
         this.parents = new ArrayList<>();
