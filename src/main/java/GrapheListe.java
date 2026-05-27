@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 
+/**
+ * Implémentation d'un graphe orienté pondéré avec des listes d'adjacence
+ */
 public class GrapheListe implements Graphe {
     private ArrayList<String> noeuds;
     private  ArrayList<Arcs> adjacence;
@@ -8,6 +11,12 @@ public class GrapheListe implements Graphe {
         this.adjacence = new ArrayList<Arcs>();
     }
 
+    /**
+     * Ajoute un arc au graphe, mais si le noeud de départ ou de destination n'existe pas, ils sont ajouté au graphe
+     * @param depart noeud de départ
+     * @param destination noeud d'arrivé
+     * @param cout cout de l'arc
+     */
     public void ajouterArc(String depart, String destination, double cout) {
         if (!noeuds.contains(depart)) {
             noeuds.add(depart);
@@ -32,6 +41,11 @@ public class GrapheListe implements Graphe {
         }
         return new Arcs();
     }
+
+    /**
+     * Affichage du graphe
+     * @return affichage du graphe
+     */
     public String toString(){
         String res = "";
         for(String n : this.noeuds){
