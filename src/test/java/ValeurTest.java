@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class ValeurTest {
     @Test
@@ -14,7 +15,8 @@ public class ValeurTest {
         assertEquals(0.0, valeur.getValeur("A"));
         assertEquals(3.0, valeur.getValeur("B"));
         assertEquals(2.0, valeur.getValeur("C"));
-
-
+        assertNull(valeur.getParent("A"));
+        assertEquals("C", valeur.getParent("B"));
+        assertEquals("A", valeur.getParent("A"));
     }
 }
