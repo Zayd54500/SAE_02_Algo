@@ -32,4 +32,16 @@ public class GrapheListe implements Graphe {
         }
         return new Arcs();
     }
+    public String toString(){
+        String res = "";
+        for(String n : this.noeuds){
+            res +=n + " -> ";
+            Arcs arcs = this.adjacence.get(this.noeuds.indexOf(n));
+            for(Arc arc : arcs.getArcs()){
+                res += arc.getDestination() + "("+arc.getCout()+") ";
+            }
+            res+='\n';
+        }
+        return res;
+    }
 }

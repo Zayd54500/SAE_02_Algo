@@ -1,11 +1,13 @@
 public class Principal {
     public static void main(String[] args) {
-        Noeud a = new Noeud("A", "A");
-        Noeud b = new Noeud("B", "B");
-        Noeud c = new Noeud("C", "C");
-        Noeud d = new Noeud("D", "D");
-        Noeud e = new Noeud("E", "E");
         GrapheListe graphe = new GrapheListe();
         graphe.ajouterArc("A", "B", 12);
+        graphe.ajouterArc("A", "D", 87);
+        graphe.ajouterArc("B", "E", 11);
+        graphe.ajouterArc("C", "A", 19);
+        graphe.ajouterArc("D", "B", 23);
+        graphe.ajouterArc("D", "C", 10);
+        graphe.ajouterArc("E", "D", 43);
+        System.out.println(graphe);
     }
 }
