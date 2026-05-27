@@ -17,6 +17,6 @@ public class ValeurTest {
         assertEquals(2.0, valeur.getValeur("C"));
         assertNull(valeur.getParent("A"));
         assertEquals("C", valeur.getParent("B"));
-        assertEquals("A", valeur.getParent("A"));
+        assertEquals("A", valeur.getParent("C"));
     }
 }
