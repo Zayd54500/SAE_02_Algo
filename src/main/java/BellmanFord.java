@@ -23,7 +23,7 @@ public class BellmanFord {
                         }
                     }
                     vieux.setValeur(noeudMin, coutMin);
-                    vieux.setParent(noeud, noeudMin);
+                    vieux.setParent(noeudMin, noeud);
                     changement = true;
                 }
             }
