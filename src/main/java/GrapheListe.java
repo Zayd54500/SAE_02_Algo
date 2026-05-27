@@ -26,7 +26,7 @@ public class GrapheListe implements Graphe {
         return this.noeuds;
     }
 
-    public Arcs suivants(String noeud) {
+    public Arcs suivants(Noeud noeud) {
         if(noeuds.contains(noeud)) {
             int indiceNoeud = noeuds.indexOf(noeud);
             return adjacence.get(indiceNoeud);
