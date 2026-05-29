@@ -8,10 +8,18 @@ public class Principal {
         graphe.ajouterArc("D", "B", 23.0);
         graphe.ajouterArc("D", "C", 10.0);
         graphe.ajouterArc("E", "D", 43.0);
+
+        System.out.println("Voici le graphe de départ : ");
         System.out.println(graphe);
 
         Dijkstra dijkstra = new Dijkstra();
-        Valeurs resultat = dijkstra.resoudre(graphe, "A");
-        System.out.println(resultat);
+        Valeurs resultatD = dijkstra.resoudre(graphe, "A");
+        System.out.println("Résultat Dijkstra : ");
+        System.out.println(resultatD);
+
+        BellmanFord bellmanFord = new BellmanFord();
+        Valeurs resultatB =  bellmanFord.calculer(graphe, "A");
+        System.out.println("Résultat Bellman-Ford : ");
+        System.out.println(resultatB);
     }
 }
