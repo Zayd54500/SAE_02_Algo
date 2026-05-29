@@ -8,6 +8,7 @@ public class BellmanFord {
                 valeur.ajouterValeur(noeud, 0.0, null);
             } else {
                 valeur.ajouterValeur(noeud, Double.MAX_VALUE, null);
+
             }
         }
     }
