@@ -1,4 +1,15 @@
+/**
+ * Implémentation de l'algo bellam ford
+ */
 public class BellmanFord {
+    /**
+     * calcul le plus court chemin depuis un noeud de départ avec l'algo de bellman ford
+     *
+     * @param graphe graphe pondéré et orienté utilisé pour le calcul
+     * @param depart le noeud de départ du calcul
+     * @return un objet Valeurs qui contient pour chaque noeud sa distance minimale
+     * depuis le départ et son parent dans le chemin trouvé
+     */
     public Valeurs calculer(Graphe graphe, String depart) {
         Valeurs valeur = new Valeurs();
         for (int i = 0; i < graphe.listeNoeuds().size(); i++) {

@@ -1,6 +1,17 @@
 import java.util.ArrayList;
 
+/**
+ * Implémentation de l'algo de Dijkstra
+ */
 public class Dijkstra {
+    /**
+     * Calcule le plus court chemins depuis un noeud de départ avec l'algo de dijkstra
+     *
+     * @param g le graphe orienté et pondéré qu'on utilise pour le calcul
+     * @param depart le noeud de départ du calcul
+     * @return un objet Valeurs contenant pour chaque noeud sa distance minimale depuis le départ
+     * et son parent dans le chemin trouvé
+     */
     public Valeurs resoudre(Graphe g, String depart) {
         Valeurs valeurs = new Valeurs();
         ArrayList<String> aTraiter = new ArrayList<>();
