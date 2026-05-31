@@ -1,6 +1,5 @@
 public class BellmanFord {
     public Valeurs calculer(GrapheListe g, String depart){
-
         Valeurs vieux = new Valeurs();
         for(String noeud : g.listeNoeuds()){
             if (noeud.equals(depart)){
@@ -8,7 +7,6 @@ public class BellmanFord {
             }
             vieux.ajouterValeur(noeud, Double.MAX_VALUE, null);
         }
-
         boolean changement = true;
         while(changement) {
             changement = false;
